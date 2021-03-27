@@ -43,7 +43,10 @@
 
             } else {
 
-                echo '<script>alert("Неверный логин или пароль")</script>';
+                // идет проверка паролей, иначе завершить код и вывести сообщение
+                $_SESSION['msg_password_login_wrong_auth'] = 'Неправильный логин или пароль!';
+                header('Location: /');
+                die();
 
             }
 
@@ -51,13 +54,19 @@
 
         } else {
 
-            echo '<script>alert("Неверный логин или пароль")</script>';
+            // идет проверка паролей, иначе завершить код и вывести сообщение
+            $_SESSION['msg_password_login_wrong_auth'] = 'Неправильный логин или пароль!';
+            header('Location: /');
+            die();
 
         }
 
 
     } else {
 
-        echo '<script>alert("Вы не заполнили все поля!")</script>';
+        // проверка на заполненность полей
+        $_SESSION['msg_empty_auth'] = 'Вы оставили пустые поля!';
+        header('Location: /');
+        die();
 
     }
