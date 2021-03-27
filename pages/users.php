@@ -34,7 +34,7 @@
 
         echo '<ul>';
 
-            $sql = 'SELECT * FROM `users`';
+            $sql = 'SELECT * FROM `users` ORDER BY `id` DESC';
 
             $query = $pdo ->query($sql);
 
