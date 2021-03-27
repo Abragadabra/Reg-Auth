@@ -34,11 +34,12 @@
                 $_SESSION['user_id'] = $user -> id;
                 $_SESSION['user_name'] = $user -> name;
                 $_SESSION['user_surname'] = $user -> surname;
+                $_SESSION['user_login'] = $user -> login;
 
-                $id = $user -> id;
+                $login = $user -> login;
 
                 // перехожу в профиль
-                header("Location: ../../pages/profile-page.php?id=$id");
+                header("Location: ../../pages/profile-page.php?login=$login");
 
             } else {
 
