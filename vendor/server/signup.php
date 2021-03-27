@@ -46,7 +46,7 @@
         }
 
         // хэширую пароль
-        $password = password_hash($password, PASSWORD_DEFAULT);
+        $password = password_hash($password, CRYPT_SHA512);
 
         // запрос в  базу
         $sql = 'INSERT INTO users(name, surname, login, password) VALUES(:name, :surname, :login, :password)';
