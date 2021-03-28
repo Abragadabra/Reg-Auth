@@ -12,7 +12,7 @@
         echo 'Внимание, если вы хотите удалить свой аккаунт, то нажмите на кнопку ниже. АККАУНТ ВОССТАНОВЛЕНИЮ НЕ ПОДЛЕЖИТ' . '<br>';
 
         // ссылка на удаление аккаунта
-        echo '<a style="color: red" href="../vendor/server/delete-account.php?id=' . $_SESSION['user_login'] . '">УДАЛИТЬ АКАУНТ</a>' . '<br>';
+        echo '<a style="color: red" href="../vendor/server/delete-account.php?login=' . $_SESSION['user_login'] . '">УДАЛИТЬ АКАУНТ</a>' . '<br>';
 
         echo '<a href="users.php">Список пользователей</a>';
 
