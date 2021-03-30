@@ -7,7 +7,7 @@
     $login = $_GET['login'];
 
     // SQL запрос
-    $sql = 'DELETE FROM `users` WHERE `login` = ?';;
+    $sql = 'DELETE FROM `users` WHERE `login` = ?';
 
     // подготавливаю запрос
     $query = $pdo -> prepare($sql);
